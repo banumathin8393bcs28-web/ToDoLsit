@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pastel Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="calc">
+    <h1 class="title">Calculator</h1>
+
+    <section class="display">
+      <div id="history"></div>
+      <div id="screen">0</div>
+    </section>
+
+    <section class="keys">
+      <button class="key clear" onclick="clearAll()">C</button>
+      <button class="key clear" onclick="backspace()">⌫</button>
+      <button class="key op" onclick="chooseOperator('/')">÷</button>
+      <button class="key op" onclick="chooseOperator('*')">×</button>
+
+      <button class="key" onclick="appendNumber('7')">7</button>
+      <button class="key" onclick="appendNumber('8')">8</button>
+      <button class="key" onclick="appendNumber('9')">9</button>
+      <button class="key op" onclick="chooseOperator('-')">−</button>
+
+      <button class="key" onclick="appendNumber('4')">4</button>
+      <button class="key" onclick="appendNumber('5')">5</button>
+      <button class="key" onclick="appendNumber('6')">6</button>
+      <button class="key op" onclick="chooseOperator('+')">+</button>
+
+      <button class="key" onclick="appendNumber('1')">1</button>
+      <button class="key" onclick="appendNumber('2')">2</button>
+      <button class="key" onclick="appendNumber('3')">3</button>
+      <button class="key equals" onclick="calculate()">=</button>
+
+      <button class="key zero" onclick="appendNumber('0')">0</button>
+      <button class="key" onclick="appendNumber('.')">.</button>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

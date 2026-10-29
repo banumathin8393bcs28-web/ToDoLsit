@@ -1,0 +1,80 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* soft lavender to peach background */
+  background: linear-gradient(135deg, #e9defa 0%, #fbe3e8 100%);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.calc {
+  width: 340px;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 32px;
+  box-shadow: 0 20px 50px rgba(120, 90, 180, 0.25);
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #9a8bb8;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+/* ---------- Display ---------- */
+.display {
+  background: #f6f2fc;
+  border-radius: 20px;
+  padding: 16px 18px;
+  min-height: 100px;
+  text-align: right;
+  margin-bottom: 20px;
+}
+#history { font-size: 15px; color: #a79bc0; min-height: 20px; }
+#screen  { font-size: 42px; font-weight: 600; color: #3b2f5c; word-wrap: break-word; }
+
+/* ---------- Keys: round buttons ---------- */
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.key {
+  height: 64px;
+  font-size: 22px;
+  font-weight: 500;
+  border: none;
+  border-radius: 50%;
+  background: #f1edf8;
+  color: #3b2f5c;
+  cursor: pointer;
+  transition: transform 0.15s, background 0.15s, box-shadow 0.15s;
+}
+
+/* Hover effects */
+.key:hover  { background: #e2daf2; transform: scale(1.08); box-shadow: 0 6px 14px rgba(120, 90, 180, 0.25); }
+.key:active { transform: scale(0.95); }
+
+.op     { background: #d8c9f7; color: #4a2fa0; }
+.op:hover { background: #c4adf2; }
+
+.clear  { background: #ffd9de; color: #c2374f; }
+.clear:hover { background: #ffc2cb; }
+
+.equals {
+  grid-row: span 2;
+  height: auto;
+  border-radius: 40px;
+  background: #ff8fa3;
+  color: white;
+  font-size: 28px;
+}
+.equals:hover { background: #ff7790; }
+
+.zero { grid-column: span 2; border-radius: 40px; }
